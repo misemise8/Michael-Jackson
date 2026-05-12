@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>S3文化祭 商品設定</title>
+  <link rel="stylesheet" href="css/setting.css">
+  <script src="js/api.js" defer></script>
+  <script src="js/setting.js" defer></script>
+</head>
+<body>
+  <main class="page-shell">
+    <header class="topbar">
+      <div>
+        <p>S3 CULTURE FESTIVAL</p>
+        <h1>商品設定</h1>
+      </div>
+      <nav class="nav-links" aria-label="画面切り替え">
+        <a href="regi.html">レジ</a>
+        <a href="kitchen.html">キッチン</a>
+        <a href="monitor.html">モニター</a>
+      </nav>
+    </header>
+
+    <section class="status-line" id="statusLine" aria-live="polite"></section>
+
+    <div class="setting-layout">
+      <section class="panel product-panel" aria-label="登録済み商品">
+        <div class="panel-header">
+          <h2>登録済みの商品</h2>
+          <span id="productCount">0 / 9</span>
+        </div>
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th>商品名</th>
+                <th>値段</th>
+                <th>在庫</th>
+                <th>表示</th>
+                <th>操作</th>
+              </tr>
+            </thead>
+            <tbody id="productRows"></tbody>
+          </table>
+        </div>
+      </section>
+
+      <section class="panel form-panel" aria-label="商品登録フォーム">
+        <h2 id="formTitle">商品登録</h2>
+        <form id="productForm">
+          <label>
+            商品名
+            <input type="text" id="name" maxlength="24" required>
+          </label>
+          <label>
+            値段
+            <input type="number" id="price" min="0" step="1" required>
+          </label>
+          <label>
+            在庫数
+            <input type="number" id="stock" min="0" step="1" required>
+          </label>
+          <label class="check-row">
+            <input type="checkbox" id="enabled" checked>
+            レジ画面に表示する
+          </label>
+          <div class="form-actions">
+            <button type="submit" id="saveButton">登録</button>
+            <button type="button" id="cancelButton">キャンセル</button>
+          </div>
+        </form>
+      </section>
+    </div>
+  </main>
+</body>
+</html>

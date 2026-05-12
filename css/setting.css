@@ -1,0 +1,206 @@
+@charset "UTF-8";
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  min-height: 100%;
+  background: #f2f2f2;
+  color: #111;
+  font-family: "Yu Gothic", "Meiryo", sans-serif;
+  letter-spacing: 0;
+}
+
+button,
+input,
+a {
+  font: inherit;
+}
+
+.page-shell {
+  width: min(1180px, 100%);
+  margin: 0 auto;
+  padding: 24px;
+}
+
+.topbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 18px;
+  padding-bottom: 18px;
+  border-bottom: 3px solid #111;
+}
+
+.topbar p,
+.topbar h1 {
+  margin: 0;
+}
+
+.topbar p {
+  font-size: 13px;
+  font-weight: 800;
+}
+
+.topbar h1 {
+  margin-top: 4px;
+  font-size: 30px;
+  line-height: 1.2;
+}
+
+.nav-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.nav-links a,
+button {
+  border: 2px solid #111;
+  background: #fff;
+  color: #111;
+  cursor: pointer;
+  text-decoration: none;
+  font-weight: 800;
+}
+
+.nav-links a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 42px;
+  padding: 0 14px;
+}
+
+.status-line {
+  min-height: 26px;
+  margin: 14px 0;
+  color: #8a1f11;
+  font-weight: 700;
+}
+
+.setting-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 340px;
+  gap: 18px;
+}
+
+.panel {
+  background: #fff;
+  border: 3px solid #111;
+  padding: 18px;
+}
+
+.panel-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 12px;
+}
+
+.panel h2 {
+  margin: 0 0 14px;
+  font-size: 22px;
+}
+
+.table-wrap {
+  max-height: 560px;
+  overflow: auto;
+  border-top: 1px solid #111;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 620px;
+}
+
+th,
+td {
+  padding: 12px 10px;
+  border-bottom: 1px solid #ddd;
+  text-align: left;
+  vertical-align: middle;
+}
+
+th {
+  background: #f7f7f7;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+
+.row-actions {
+  display: flex;
+  gap: 6px;
+}
+
+.row-actions button,
+.form-actions button {
+  min-height: 40px;
+  padding: 0 12px;
+}
+
+.form-panel form {
+  display: grid;
+  gap: 14px;
+}
+
+label {
+  display: grid;
+  gap: 6px;
+  font-weight: 800;
+}
+
+input[type="text"],
+input[type="number"] {
+  width: 100%;
+  min-height: 48px;
+  border: 2px solid #111;
+  padding: 8px 10px;
+}
+
+.check-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 700;
+}
+
+.check-row input {
+  width: 22px;
+  height: 22px;
+}
+
+.form-actions {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+
+#saveButton {
+  background: #111;
+  color: #fff;
+}
+
+@media (max-width: 820px) {
+  .page-shell {
+    padding: 16px;
+  }
+
+  .topbar,
+  .setting-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .topbar {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .setting-layout {
+    display: grid;
+  }
+}

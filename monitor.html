@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>S3文化祭 モニター</title>
+  <link rel="stylesheet" href="css/monitor.css">
+  <script src="js/api.js" defer></script>
+  <script src="js/monitor.js" defer></script>
+</head>
+<body>
+  <main class="monitor-app">
+    <header class="monitor-header">
+      <p>S3 CULTURE FESTIVAL</p>
+      <h1>S3文化祭</h1>
+    </header>
+
+    <section class="monitor-column preparing" aria-label="準備中">
+      <h2>準備中</h2>
+      <div class="number-grid" id="preparingNumbers"></div>
+    </section>
+
+    <section class="monitor-column calling" aria-label="呼出中">
+      <h2>呼出中</h2>
+      <div class="number-grid" id="callingNumbers"></div>
+    </section>
+
+    <p class="status-line" id="statusLine" aria-live="polite"></p>
+  </main>
+</body>
+</html>

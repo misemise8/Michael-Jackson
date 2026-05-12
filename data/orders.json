@@ -1,0 +1,101 @@
+[
+  {
+    "id": "20260512-001",
+    "ticketNo": "MJ-001",
+    "status": "calling",
+    "createdAt": "2026-05-12T01:01:15.643Z",
+    "items": [
+      {
+        "productId": "p005",
+        "name": "しね",
+        "unitPrice": 12000,
+        "quantity": 1,
+        "amount": 12000,
+        "checked": true
+      },
+      {
+        "productId": "p001",
+        "name": "ムーンウォークコーラ",
+        "unitPrice": 200,
+        "quantity": 1,
+        "amount": 200,
+        "checked": true
+      },
+      {
+        "productId": "p002",
+        "name": "スリラーポップコーン",
+        "unitPrice": 300,
+        "quantity": 1,
+        "amount": 300,
+        "checked": true
+      },
+      {
+        "productId": "p003",
+        "name": "ビートイットポテト",
+        "unitPrice": 350,
+        "quantity": 1,
+        "amount": 350,
+        "checked": true
+      },
+      {
+        "productId": "p004",
+        "name": "ビリージーンセット",
+        "unitPrice": 600,
+        "quantity": 1,
+        "amount": 600,
+        "checked": true
+      }
+    ],
+    "total": 13450,
+    "updatedAt": "2026-05-12T01:02:18.187Z"
+  },
+  {
+    "id": "20260512-002",
+    "ticketNo": "MJ-002",
+    "status": "preparing",
+    "createdAt": "2026-05-12T01:01:54.970Z",
+    "items": [
+      {
+        "productId": "p005",
+        "name": "しね",
+        "unitPrice": 12000,
+        "quantity": 1,
+        "amount": 12000,
+        "checked": false
+      },
+      {
+        "productId": "p004",
+        "name": "ビリージーンセット",
+        "unitPrice": 600,
+        "quantity": 1,
+        "amount": 600,
+        "checked": false
+      },
+      {
+        "productId": "p001",
+        "name": "ムーンウォークコーラ",
+        "unitPrice": 200,
+        "quantity": 1,
+        "amount": 200,
+        "checked": false
+      },
+      {
+        "productId": "p002",
+        "name": "スリラーポップコーン",
+        "unitPrice": 300,
+        "quantity": 1,
+        "amount": 300,
+        "checked": false
+      },
+      {
+        "productId": "p003",
+        "name": "ビートイットポテト",
+        "unitPrice": 350,
+        "quantity": 1,
+        "amount": 350,
+        "checked": false
+      }
+    ],
+    "total": 13450
+  }
+]

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>S3文化祭 レジ</title>
+  <link rel="stylesheet" href="css/regi.css">
+  <script src="js/api.js" defer></script>
+  <script src="js/regi.js" defer></script>
+</head>
+<body>
+  <main class="regi-app">
+    <header class="topbar">
+      <div>
+        <p>S3 CULTURE FESTIVAL</p>
+        <h1>注文受付</h1>
+      </div>
+      <nav class="nav-links" aria-label="画面切り替え">
+        <a href="setting.html">設定</a>
+        <a href="kitchen.html">キッチン</a>
+        <a href="monitor.html">モニター</a>
+      </nav>
+    </header>
+
+    <section class="status-line" id="statusLine" aria-live="polite"></section>
+
+    <section class="menu-section" aria-label="商品ボタン">
+      <h2>商品</h2>
+      <div class="menu-grid" id="menuGrid"></div>
+    </section>
+
+    <aside class="cart-panel" aria-label="注文内容">
+      <div class="cart-header">
+        <h2>注文内容</h2>
+        <button type="button" id="clearCart">クリア</button>
+      </div>
+      <ul class="cart-list" id="cartList"></ul>
+      <p class="empty-message" id="emptyMessage">商品を選んでください</p>
+      <div class="cart-total">
+        <span>合計金額</span>
+        <strong id="cartTotal">￥0</strong>
+      </div>
+      <button type="button" class="confirm-button" id="confirmOrder">
+        注文確定・引換券作成
+      </button>
+      <p class="last-order" id="lastOrder"></p>
+    </aside>
+  </main>
+</body>
+</html>

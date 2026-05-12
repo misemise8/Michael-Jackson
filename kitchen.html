@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>S3文化祭 キッチン</title>
+  <link rel="stylesheet" href="css/kitchen.css">
+  <script src="js/api.js" defer></script>
+  <script src="js/kitchen.js" defer></script>
+</head>
+<body>
+  <main class="kitchen-app">
+    <header class="topbar">
+      <div>
+        <p>S3 CULTURE FESTIVAL</p>
+        <h1>キッチン</h1>
+      </div>
+      <nav class="nav-links" aria-label="画面切り替え">
+        <a href="regi.html">レジ</a>
+        <a href="setting.html">設定</a>
+        <a href="monitor.html">モニター</a>
+      </nav>
+    </header>
+
+    <section class="status-line" id="statusLine" aria-live="polite"></section>
+
+    <section class="order-column" aria-label="準備中の注文">
+      <h2>準備中</h2>
+      <div class="order-list" id="preparingList"></div>
+    </section>
+
+    <section class="order-column calling-column" aria-label="呼出中の注文">
+      <h2>呼出中</h2>
+      <div class="order-list" id="callingList"></div>
+    </section>
+  </main>
+</body>
+</html>

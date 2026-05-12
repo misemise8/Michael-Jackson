@@ -1,0 +1,42 @@
+[
+  {
+    "id": "p001",
+    "name": "ムーンウォークコーラ",
+    "price": 200,
+    "stock": 28,
+    "enabled": true,
+    "sortOrder": 1
+  },
+  {
+    "id": "p002",
+    "name": "スリラーポップコーン",
+    "price": 300,
+    "stock": 23,
+    "enabled": true,
+    "sortOrder": 2
+  },
+  {
+    "id": "p003",
+    "name": "ビートイットポテト",
+    "price": 350,
+    "stock": 18,
+    "enabled": true,
+    "sortOrder": 3
+  },
+  {
+    "id": "p004",
+    "name": "ビリージーンセット",
+    "price": 600,
+    "stock": 13,
+    "enabled": true,
+    "sortOrder": 4
+  },
+  {
+    "id": "p005",
+    "name": "しね",
+    "price": 12000,
+    "stock": 3,
+    "enabled": true,
+    "sortOrder": 5
+  }
+]

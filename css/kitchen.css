@@ -1,0 +1,212 @@
+@charset "UTF-8";
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  min-height: 100%;
+  background: #f2f2f2;
+  color: #111;
+  font-family: "Yu Gothic", "Meiryo", sans-serif;
+  letter-spacing: 0;
+}
+
+button,
+a,
+input {
+  font: inherit;
+}
+
+.kitchen-app {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  width: min(1280px, 100%);
+  margin: 0 auto;
+  padding: 24px;
+}
+
+.topbar,
+.status-line {
+  grid-column: 1 / -1;
+}
+
+.topbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 18px;
+  padding-bottom: 18px;
+  border-bottom: 3px solid #111;
+}
+
+.topbar p,
+.topbar h1 {
+  margin: 0;
+}
+
+.topbar p {
+  font-size: 13px;
+  font-weight: 800;
+}
+
+.topbar h1 {
+  margin-top: 4px;
+  font-size: 30px;
+}
+
+.nav-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.nav-links a,
+button {
+  border: 2px solid #111;
+  background: #fff;
+  color: #111;
+  cursor: pointer;
+  text-decoration: none;
+  font-weight: 800;
+}
+
+.nav-links a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 42px;
+  padding: 0 14px;
+}
+
+.status-line {
+  min-height: 26px;
+  color: #8a1f11;
+  font-weight: 800;
+}
+
+.order-column {
+  min-width: 0;
+}
+
+.order-column h2 {
+  margin: 0 0 14px;
+  font-size: 26px;
+}
+
+.order-list {
+  display: grid;
+  gap: 14px;
+  max-height: calc(100vh - 180px);
+  overflow: auto;
+}
+
+.order-card {
+  background: #fff;
+  border: 3px solid #111;
+  padding: 16px;
+}
+
+.order-card.calling {
+  border-width: 4px;
+}
+
+.order-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 12px;
+  padding-bottom: 12px;
+  border-bottom: 1px dashed #111;
+}
+
+.ticket-no {
+  font-size: 30px;
+  font-weight: 900;
+}
+
+.order-time {
+  color: #555;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.kitchen-items {
+  list-style: none;
+  margin: 12px 0;
+  padding: 0;
+}
+
+.kitchen-items li {
+  display: grid;
+  grid-template-columns: 28px 1fr auto;
+  gap: 8px;
+  align-items: center;
+  padding: 8px 0;
+  border-bottom: 1px solid #ddd;
+}
+
+.kitchen-items input {
+  width: 22px;
+  height: 22px;
+}
+
+.kitchen-items .checked {
+  text-decoration: line-through;
+  color: #777;
+}
+
+.order-total {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  padding: 10px 0 14px;
+  font-weight: 900;
+}
+
+.card-actions {
+  display: grid;
+  gap: 8px;
+}
+
+.card-actions button {
+  min-height: 48px;
+}
+
+.call-button {
+  background: #111;
+  color: #fff;
+}
+
+.call-button:disabled {
+  background: #aaa;
+  border-color: #aaa;
+  cursor: not-allowed;
+}
+
+.complete-button {
+  background: #fff;
+}
+
+.empty {
+  margin: 0;
+  padding: 20px;
+  background: #fff;
+  border: 2px dashed #aaa;
+  color: #666;
+  text-align: center;
+}
+
+@media (max-width: 900px) {
+  .kitchen-app {
+    grid-template-columns: 1fr;
+    padding: 16px;
+  }
+
+  .topbar {
+    align-items: stretch;
+    flex-direction: column;
+  }
+}

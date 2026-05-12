@@ -23,14 +23,41 @@ body {
 body {
   min-height: 100vh;
   display: flex;
-  justify-content: center;
-  align-items: flex-start;
+  flex-direction: column;
+  align-items: center;
   padding: 16px;
+}
+
+button,
+a {
+  font: inherit;
+}
+
+.screen-tools {
+  display: flex;
+  gap: 8px;
+  width: 58mm;
+  margin-bottom: 10px;
+}
+
+.screen-tools a,
+.screen-tools button {
+  flex: 1;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 38px;
+  border: 2px solid #111;
+  background: #fff;
+  color: #111;
+  font-weight: 800;
+  text-decoration: none;
+  cursor: pointer;
 }
 
 .receipt {
   width: 58mm;
-  min-height: 120mm;
+  min-height: 105mm;
   padding: 5mm 4mm;
   background: #fff;
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.18);
@@ -53,7 +80,7 @@ h1 {
   margin: 1mm 0;
   font-size: 20px;
   line-height: 1.1;
-  font-weight: 800;
+  font-weight: 900;
 }
 
 .receipt-section {
@@ -83,7 +110,7 @@ h2 {
 }
 
 .item-name {
-  font-weight: 700;
+  font-weight: 800;
 }
 
 .item-count {
@@ -92,6 +119,12 @@ h2 {
 
 .item-price {
   text-align: right;
+}
+
+.empty-order {
+  margin: 0;
+  color: #666;
+  text-align: center;
 }
 
 .total-row {
@@ -119,7 +152,7 @@ h2 {
   display: block;
   margin-bottom: 2mm;
   font-size: 13px;
-  font-weight: 700;
+  font-weight: 800;
 }
 
 .ticket-id strong {
@@ -147,6 +180,13 @@ h2 {
   line-height: 1.8;
 }
 
+.status-line {
+  width: 58mm;
+  min-height: 22px;
+  color: #8a1f11;
+  font-weight: 800;
+}
+
 @media print {
   html,
   body {
@@ -158,6 +198,11 @@ h2 {
   body {
     display: block;
     padding: 0;
+  }
+
+  .screen-tools,
+  .status-line {
+    display: none;
   }
 
   .receipt {

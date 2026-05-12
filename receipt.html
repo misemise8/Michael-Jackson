@@ -3,21 +3,28 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>S3文化祭 レシート</title>
-  <link rel="stylesheet" href="receipt.css">
-  <script src="receipt.js" defer></script>
+  <title>S3文化祭 引換券</title>
+  <link rel="stylesheet" href="css/receipt.css">
+  <script src="js/api.js" defer></script>
+  <script src="js/receipt.js" defer></script>
 </head>
 <body>
-  <main class="receipt" aria-label="S3文化祭 注文レシート">
+  <div class="screen-tools">
+    <a href="regi.html">レジへ</a>
+    <button type="button" id="printButton">印刷</button>
+  </div>
+
+  <main class="receipt" aria-label="S3文化祭 引換券">
     <header class="receipt-header">
       <p class="shop-label">S3 CULTURE FESTIVAL</p>
-      <h1 id="receiptTitle">S3文化祭</h1>
+      <h1>S3文化祭</h1>
       <p class="subtitle">EXCHANGE TICKET</p>
     </header>
 
     <section class="receipt-section">
       <h2>注文内容</h2>
       <ul class="items" id="orderItems"></ul>
+      <p class="empty-order" id="emptyOrder">注文を読み込み中です</p>
     </section>
 
     <section class="total-row" aria-label="合計金額">
@@ -27,7 +34,7 @@
 
     <section class="ticket-id" aria-label="引換番号">
       <span>引換番号</span>
-      <strong id="ticketId">MJ-0001</strong>
+      <strong id="ticketNo">---</strong>
       <p>この番号で商品をお受け取りください</p>
     </section>
 
@@ -38,5 +45,7 @@
       </div>
     </section>
   </main>
+
+  <p class="status-line" id="statusLine" aria-live="polite"></p>
 </body>
 </html>
