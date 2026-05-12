@@ -1,0 +1,169 @@
+@charset "UTF-8";
+
+@page {
+  size: 58mm auto;
+  margin: 0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  background: #ececec;
+  color: #111;
+  font-family: "Yu Gothic", "Meiryo", monospace;
+  font-size: 12px;
+  letter-spacing: 0;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 16px;
+}
+
+.receipt {
+  width: 58mm;
+  min-height: 120mm;
+  padding: 5mm 4mm;
+  background: #fff;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.18);
+}
+
+.receipt-header {
+  text-align: center;
+  border-bottom: 1px dashed #111;
+  padding-bottom: 4mm;
+}
+
+.shop-label,
+.subtitle {
+  margin: 0;
+  font-size: 10px;
+  line-height: 1.4;
+}
+
+h1 {
+  margin: 1mm 0;
+  font-size: 20px;
+  line-height: 1.1;
+  font-weight: 800;
+}
+
+.receipt-section {
+  padding: 4mm 0 3mm;
+  border-bottom: 1px dashed #111;
+}
+
+h2 {
+  margin: 0 0 3mm;
+  text-align: center;
+  font-size: 14px;
+}
+
+.items {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.items li {
+  display: grid;
+  grid-template-columns: 1fr 13mm 18mm;
+  gap: 2mm;
+  align-items: baseline;
+  min-height: 7mm;
+  font-size: 14px;
+}
+
+.item-name {
+  font-weight: 700;
+}
+
+.item-count {
+  text-align: center;
+}
+
+.item-price {
+  text-align: right;
+}
+
+.total-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 3mm;
+  padding: 4mm 0;
+  border-bottom: 2px solid #111;
+  font-size: 15px;
+}
+
+.total-row strong {
+  font-size: 19px;
+}
+
+.ticket-id {
+  margin: 4mm 0;
+  padding: 4mm 2mm;
+  text-align: center;
+  border: 2px solid #111;
+}
+
+.ticket-id span {
+  display: block;
+  margin-bottom: 2mm;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.ticket-id strong {
+  display: block;
+  font-size: 32px;
+  line-height: 1.1;
+  font-weight: 900;
+}
+
+.ticket-id p {
+  margin: 2mm 0 0;
+  font-size: 10px;
+  line-height: 1.4;
+}
+
+.order-info {
+  padding: 0 0 4mm;
+  border-bottom: 1px dashed #111;
+}
+
+.order-info div {
+  display: flex;
+  justify-content: space-between;
+  gap: 3mm;
+  line-height: 1.8;
+}
+
+@media print {
+  html,
+  body {
+    width: 58mm;
+    min-height: auto;
+    background: #fff;
+  }
+
+  body {
+    display: block;
+    padding: 0;
+  }
+
+  .receipt {
+    width: 58mm;
+    min-height: auto;
+    margin: 0;
+    box-shadow: none;
+  }
+}

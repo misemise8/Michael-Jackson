@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>S3文化祭 レシート</title>
+  <link rel="stylesheet" href="receipt.css">
+  <script src="receipt.js" defer></script>
+</head>
+<body>
+  <main class="receipt" aria-label="S3文化祭 注文レシート">
+    <header class="receipt-header">
+      <p class="shop-label">S3 CULTURE FESTIVAL</p>
+      <h1 id="receiptTitle">S3文化祭</h1>
+      <p class="subtitle">EXCHANGE TICKET</p>
+    </header>
+
+    <section class="receipt-section">
+      <h2>注文内容</h2>
+      <ul class="items" id="orderItems"></ul>
+    </section>
+
+    <section class="total-row" aria-label="合計金額">
+      <span>合計金額</span>
+      <strong id="orderTotal">￥0</strong>
+    </section>
+
+    <section class="ticket-id" aria-label="引換番号">
+      <span>引換番号</span>
+      <strong id="ticketId">MJ-0001</strong>
+      <p>この番号で商品をお受け取りください</p>
+    </section>
+
+    <section class="order-info">
+      <div>
+        <span>日時</span>
+        <time id="orderDateTime" datetime=""></time>
+      </div>
+    </section>
+  </main>
+</body>
+</html>
